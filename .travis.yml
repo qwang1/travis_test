@@ -1,2 +1,13 @@
 language: python
-script: true
+sudo: required
+before_install: sudo pip install foo
+install: true
+before_script: true
+//script: true
+script: mytest.py
+aftersuccess 
+//or afterfailure
+before_deploy: true
+deploy: true
+after_deploy: true
+after_script: true
